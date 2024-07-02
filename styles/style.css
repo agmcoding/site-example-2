@@ -1,0 +1,100 @@
+:root {
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  display: flex;
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav ul button {
+  border: 0 solid transparent;
+}
+
+header nav ul li {
+  text-align: center;
+  margin-inline: 1rem;
+}
+
+header nav ul li:first-child {
+  margin-inline-end: auto;
+}
+
+/* Hamburger menu style */
+header nav ul li:nth-child(2) {
+  width: 3rem;
+  height: 3rem;
+  margin-inline-start: auto;
+  position: relative;
+}
+
+/* Hamburger menu button to be more visible when on focus */
+header nav ul li:nth-child(2) button.menu-button:focus {
+  width: inherit;
+  height: inherit;
+}
+
+/* Hamburger menu lines style */
+header nav ul li button.menu-button span {
+  background-color: green;
+  width: 100%;
+  height: 5px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header nav ul li:nth-child(2) span:first-child {
+  top: 25%;
+}
+
+header nav ul li:nth-child(2) span:last-child {
+  top: 75%;
+}
+
+header nav ul li:nth-child(3),
+header nav ul li:nth-child(4),
+header nav ul li:nth-child(5),
+header nav ul li:nth-child(6) {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  header nav ul li button.menu-button {
+    display: none;
+  }
+
+  header nav ul li:nth-child(3),
+  header nav ul li:nth-child(4),
+  header nav ul li:nth-child(5),
+  header nav ul li:nth-child(6) {
+    display: block;
+  }
+}
